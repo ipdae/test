@@ -1,0 +1,12 @@
+class lexicon(object):
+    @staticmethod
+    def scan(self, sentence):
+        self.sentence = sentence
+        self.words = sentence.split()
+        for words in self.words:
+            if word in direction:
+                word = ('direction', '%s' % word)
+
+            return word
+
+

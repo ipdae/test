@@ -1,0 +1,56 @@
+'''
+Created on Nov 11, 2011
+
+@author: Raul
+'''
+import re
+directions = ('direction', ['north','south','east','west','down','up','left','right','back'])
+verbs = ('verb',['go','stop','kill','eat'])
+stop = ('stop',['the','in','from','at','it','of'])
+nouns = ('noun',['noun','bear','princess','cabinet'])
+
+class lexicon():
+    '''
+    classdocs
+    '''    
+
+    @staticmethod
+    def scan(self,str):
+        result = []
+        input = str.split(' ')
+        
+        lex = [directions,verbs,stop,nouns]
+        
+        for o in input:
+            found = False
+            for type in lex:
+                if o in type[1]:
+                    found = True
+                    t = type[0]        
+            if found == False:
+                k = self.numb(o)
+                if k == None: 
+                    result.append(('error',o))
+                    continue
+                else:
+                    o = k
+                    t = 'number'
+            
+            result.append((t,o))
+
+                
+                        
+        print result
+        return result
+                    
+    def numb(self,s):
+        try:
+            return int(s)
+        except ValueError:
+            return None                                         
+
+    def __init__(self):
+        '''
+        Constructor
+        '''
+        

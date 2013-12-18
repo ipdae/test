@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div id="wrapper"></div>
+<script type="text/javascript">
+var container = document.getElementById("wrapper");
+var numImages = 0;
+do
+{
+//this block gets executed first:
+var newImage = '<img src="http://html.net/tutorials/javascript/loop.gif" alt="#" />' + newImage;
+container.innerHTML += newImage;
+numImages ++;
+}
+//here's the condition to evaluate:
+//the first cycle has already executed.
+while (numImages <=9);
+</script>
+</body>
+</html>

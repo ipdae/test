@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+<title></title>
+<body>
+<script type="text/javascript">
+var message = "outside global message";
+var otherGlobalVariable = "other global variable";
+function getMessage()
+{
+var message = "inside local variable";
+alert(message);
+alert(otherGlobalVariable);
+}
+getMessage();
+alert(message);
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYTPE html>
+<html>
+<head>
+<title>Lesson 5: Operators and Comparisons</title>
+</head>
+<body>
+<h1>Lesson 5: Operators and Comparisons</h1>
+
+<script type="text/javascript">
+
+//Create and initialize your variables
+
+var result = 0;
+
+var firstNum = 20;
+
+var secondNum = 5;
+
+//Addition: result = 25
+
+result = firstNum + secondNum;
+
+//write result on the page
+
+document.write(result);
+
+</script>
+
+</body>
+</html>

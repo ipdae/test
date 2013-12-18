@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lesson 7: Leave Boring Repetitive Stuff to JavaScript with Loops</title>
+</head>
+<body>
+<h1>Lesson 7: for Loop</h1>
+<div id="wrapper"></div>
+<script type="text/javascript">
+//Grab the html div by its id attribute
+//and store it in a var named container
+var container = document.getElementById("wrapper");
+//use Math.random to generate a random number
+//between 0 and 1. Store random number in a var
+var randomNumber = Math.random();
+//use Math.floor() to round off the random number
+//to an integer value between 0 and 10 and store it in a var
+var numimages = Math.floor(randomNumber * 11);
+//just for testing purposes, lets alert the resulting random number
+alert(numImages);
+//the loop will run for the number of times indicated
+//by the resulting random number
+for (var i=1; i <= numImages; i++)
+{
+//code to be executed:
+//create a var and store a string made of a new HTML img element
+//and the iteration variable i (use + concatenation operator):
+//i contains the iteration number
+//Take note:make sure the img src corresponds to a real image file
+var newImage = '<img src="loop.gif" alt="#" />' + i;
+//use the container var that stores the div element
+//and use innerHTML to insert the string stored in the newImage var
+//Use shortcut assignment += so previous values do not get wiped off
+container.innerHTML += newImage;
+}
+</script>
+</body>
+</html>
